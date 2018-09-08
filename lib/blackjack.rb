@@ -29,16 +29,15 @@ end
 
 def hit?(num)
   total = num
+  puts total
   prompt_user
   round = get_user_input
-case round
-  when round == "h"
-    return total += deal_card
-  when round == "s"
-    return total
-  else
-    invalid_command
+  loop do
+    break if round == s
+    total = total + deal_card
+    puts total
     prompt_user
+    round = get_user_input
   end
 end
 
