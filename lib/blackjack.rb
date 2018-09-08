@@ -29,18 +29,7 @@ def initial_round
 end
 
 def hit?(num)
-  total = num
-  puts total
   prompt_user
-  answer = get_user_input
-  if answer == "h"
-    while answer != "s"
-      total += deal_card
-      puts total
-      prompt_user
-      answer = get_user_input
-  else
-    invalid_command
 end
 
 def invalid_command
