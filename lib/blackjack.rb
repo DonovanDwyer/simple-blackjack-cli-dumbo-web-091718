@@ -32,14 +32,15 @@ def hit?(num)
   total = num
   puts total
   prompt_user
-  round = get_user_input
-  loop do
-    break if round == s
-    total = total + deal_card
-    puts total
-    prompt_user
-    round = get_user_input
-  end
+  answer = get_user_input
+  if answer == "h"
+    while answer != "s"
+      total += deal_card
+      puts total
+      prompt_user
+      answer = get_user_input
+  else
+    invalid_command
 end
 
 def invalid_command
