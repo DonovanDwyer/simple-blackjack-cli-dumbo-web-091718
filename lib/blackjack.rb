@@ -32,8 +32,9 @@ def hit?(num)
   prompt_user
   ans = get_user_input
   num
-  while ans == "h"
+  if ans == "h"
     return num + deal_card
+  end
 end
 
 def invalid_command
